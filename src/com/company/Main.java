@@ -13,29 +13,29 @@ public class Main {
                 System.out.println("начните заново и введидите 1, 2 или 3");
             } else {
                 System.out.println("Введите количество выбранных единиц:");
-                int amountm = in.nextInt();
+                double amountm = in.nextDouble();
                 //float[] massrez = new float[3];
-                float[] massrez = {1, 0.453F, 16.38F};
-                float kg = amountm / massrez[mass - 1];
+                float[] massrez = {1, 0.45359237F, 16.38F};
+                double kg = amountm * massrez[mass - 1];
                 System.out.printf("Результат: \n" +
-                        "> Килограммы: %.0f\n" +
+                        "> Килограммы: %.2f\n" +
                         "> Фунты: %.2f\n" +
-                        "> Пуды: %.2f\n", kg, kg * massrez[1], kg * massrez[2]);
+                        "> Пуды: %.2f\n", kg, kg / massrez[1], kg / massrez[2]);
             }
         }
         else if (x == 2.) {
             System.out.println("Выберите единицу измерения: 1 - метр, 2 - миля, 3 - ярд, 4 - фут");
             int dist = in.nextInt();
-            if (dist!=1&dist!= 2 & dist != 3) {
+            if (dist!=1&dist!= 2 & dist != 3 & dist != 4) {
                 System.out.println("начните заново и введидите 1, 2, 3 или 4");
             }
                 else {
                     System.out.println("Введите количество выбранных единиц:");
-                    int amountd = in.nextInt();
+                    double amountd = in.nextDouble();
                     float[] drez = {1, 0.0006F, 1.094F, 3.281F};
-                    float m = amountd / drez[dist - 1];
+                    double m = amountd / drez[dist - 1];
                     System.out.printf("Результат: \n" +
-                            "> Метры: %.0f\n" +
+                            "> Метры: %.2f\n" +
                             "> Мили: %.3f\n" +
                             "> Ярды: %.2f\n" +
                             "> Футы: %.2f\n", m, m * drez[1], m * drez[2], m * drez[3]);
